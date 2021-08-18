@@ -1,0 +1,28 @@
+// Colour schemes
+$mainColour: white;
+$secondaryColour: rgb(243, 243, 243);
+$accentColour: #06b8ff;
+$secondaryAccentColour: #4400ff;
+
+
+@keyframes arrowPoint 
+{
+    //returns to starting position
+    100%
+    {
+        transform: translateY(0px);
+    }
+
+    //moves downards 10 pixels
+    50%
+    {
+        transform: translateY(-10px);
+    }
+
+    //starts at position 0
+    0%
+    {
+        transform: translateY(0px);
+    }
+}
+
