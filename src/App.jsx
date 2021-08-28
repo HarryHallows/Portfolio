@@ -1,21 +1,24 @@
 //File Imports
 import Topbar from "./components/topbar/Topbar";
-import Intro from "./components/intro/Intro";
-import About from "./components/about/About";
-import Portfolio from "./components/portfolio/Portfolio";
-import Contact from "./components/contact/Contact";
+import Home from "./components/home/Home";
+import Menu from "./components/menu/Menu";
 
 //Portfolio Pages
-import PortfolioPages from "./components/portfolio/pages/PortfolioPages"
+import Fortify from "./components/portfolio/pages/fortify/Fortify"
+import Cloud from "./components/portfolio/pages/cloud/Cloud"
+import Gonemissing from './components/portfolio/pages/gonemissing/Gonemissing';
+import ArchiesHunt from "./components/portfolio/pages/archieshunt/Archieshunt";
+import Bystander from './components/portfolio/pages/bystander/Bystander';
+import Penelope from './components/portfolio/pages/penelope/Penelope';
 
 import "./app.scss";
 
 //Functionality
 import { useState } from "react";
-import Menu from "./components/menu/Menu";
+
 
 //Routing
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 
 function App() 
 {
@@ -26,28 +29,24 @@ function App()
   //Hook up the SCSS to the new directory of this component
 
   return (   
-    <Router>
       <div className="app">
         <Topbar menuOpen={menuOpen} setMenuOpen={setMenuOpen}/> 
         <Menu menuOpen={menuOpen} setMenuOpen={setMenuOpen}/>
 
-        <div className="sections">
-          <Intro />
-          <About />           
-          <Portfolio />
-          <Contact /> 
-        </div>
-
-        <div className="appPortfolio">
-          <Switch>
-            <Route exact path="/" component={PortfolioPages}/>
-          </Switch>
-        </div>
-        {/*<Route exact path ="/" component={PortfolioPages}/>/*}
-        {/* <Route exact path="/" component={Home}/>*/}
-        {/*<Route exact to="/" component={Intro}/>*/}
+        <Switch>
+          <div className="sections">
+            <Route exact path="/" component={Home}/>
+          </div>
+          
+          <Route path="/Fortify" component={Fortify}/>
+          <Route path="/CloudCities" component={Cloud}/>
+          <Route path="/GoneMissing" component={Gonemissing}/>
+          <Route path="/ArchiesHunt" component={ArchiesHunt}/>
+          <Route path="/Bystander" component={Bystander}/>
+          <Route path="/Penelope" component={Penelope}/>
+        </Switch>
       </div>
-    </Router>
+
   );
 }
 

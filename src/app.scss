@@ -2,42 +2,45 @@
 .app
 {
     height: 100vh;
-    overflow: hidden;
 
     .sections
     {
-        width: 100%;
-        height: calc(100vh - 70px);
-        position: relative;
-        top: 70px;
-    
-        
-        scroll-snap-type: y mandatory;
-        scroll-behavior: smooth;
-
-        /* creating the view height and width of all elements 
-        within the sections div object */
-        > *
+        overflow: hidden;
+        .Home
         {
+            width: 100%;
+            height: calc(100vh - 70px);
+            position: relative;
+            top: 70px;
+        
+            
+            scroll-snap-type: y mandatory;
+            scroll-behavior: smooth;
+
             scrollbar-width:none; //for firefox
-    
+        
             &::-webkit-scrollbar
             {
                 display: none; // other browsers
             }
-            
-            scroll-snap-align: start;
-            width: 100vw;
-            height: calc(100vh - 70px);
+
+            /* creating the view height and width of all elements 
+            within the sections div object */
+            > *
+            {
+                scrollbar-width:none; //for firefox
+        
+                &::-webkit-scrollbar
+                {
+                    display: none; // other browsers
+                }
+                
+                scroll-snap-align: start;
+                width: 100vw;
+                height: calc(100vh - 70px);
+            }
         }
+        
     }
 
-    .appPortfolio
-    {
-        width: 100%;
-        height: calc(100vh - 70px);
-        position: relative;
-        top: 70px;
-        left: -300;
-    }
 }
