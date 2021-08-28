@@ -13,7 +13,7 @@ export default function Contact() {
     return (
         <div className ="contact" id="contact" alt="the section of the website that contains a contact form to contact the developer for professional uses.">
             <div className="left">
-                <img src="assets/handshake.svg" alt="icon source https://freeicons.io/start-up-set-2/handshake-icon-30877" />
+                <img src="/Portfolio/assets/handshake.svg" alt="icon source https://freeicons.io/start-up-set-2/handshake-icon-30877" />
             </div>
             <div className="right">
                 <h2>Contact</h2>

@@ -17,14 +17,14 @@ export default function About() {
                         </div>
                         
                         <a href="#portfolio">
-                            <img src="assets/arrow.svg" alt="arrow Icon by freeicons on freeicons.io" />
+                            <img src="/Portfolio/assets/arrow.svg" alt="arrow Icon by freeicons on freeicons.io" />
                         </a>
                     </div>  
                 </div>
 
             <div className="right">
                 <div className="imgContainer">
-                    <img src="assets/bonsai.png" alt="" />
+                    <img src="/Portfolio/assets/bonsai.png" alt="" />
                 </div>
             </div>
 

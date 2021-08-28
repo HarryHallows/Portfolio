@@ -22,33 +22,31 @@ function App()
   //Hook to control the usage of the hamburger menu button
   const [menuOpen, setMenuOpen] = useState(false)
 
+  //TODO: Move main page components into a separate Home component
+  //Hook up the SCSS to the new directory of this component
+
   return (   
     <Router>
       <div className="app">
         <Topbar menuOpen={menuOpen} setMenuOpen={setMenuOpen}/> 
         <Menu menuOpen={menuOpen} setMenuOpen={setMenuOpen}/>
 
-        <Switch>
-          <div className="sections">
-              <Intro />
-              <About />           
-              <Portfolio />
-              <Contact />
-          </div>
-        
-          <div className="appPortfolio">
+        <div className="sections">
+          <Intro />
+          <About />           
+          <Portfolio />
+          <Contact /> 
+        </div>
+
+        <div className="appPortfolio">
+          <Switch>
             <Route exact path="/" component={PortfolioPages}/>
-          </div>
-
-        </Switch>
-        
-
-
+          </Switch>
+        </div>
         {/*<Route exact path ="/" component={PortfolioPages}/>/*}
         {/* <Route exact path="/" component={Home}/>*/}
         {/*<Route exact to="/" component={Intro}/>*/}
       </div>
-  
     </Router>
   );
 }

@@ -11,7 +11,7 @@ export default function Intro() {
         init(textRef.current, 
         { showCursor: true, 
             backDelay: 2500,
-            strings: ['Game Developer.', 'Creative.', 'Bonsai Lover.', 'Game Enthusiast.' ] 
+            strings: ['Game Developer.', 'Problem Solver.', 'Creative.', 'Bonsai Lover.', 'Game Enthusiast.' ] 
         })
 
     }, [])
@@ -21,7 +21,7 @@ export default function Intro() {
             
             <div className="left">
                 <div className="imgContainer">
-                    <img src="assets/me.png" alt="profile of myself" />
+                    <img src="/Portfolio/assets/me.png" alt="profile of myself" />
                 </div>
             </div>
             
@@ -32,7 +32,7 @@ export default function Intro() {
                     <h3 alt="An updating title that states different specialties">I'm a <span ref={textRef}></span></h3>
 
                     <a href="#about">
-                        <img src="assets/arrow.svg" alt="arrow Icon by freeicons on freeicons.io" />
+                        <img src="/Portfolio/assets/arrow.svg" alt="arrow Icon by freeicons on freeicons.io" />
                     </a>
                 </div>
             </div>
