@@ -2,6 +2,7 @@
 .app
 {
     height: 100vh;
+    overflow: hidden;
 
     .sections
     {
@@ -37,5 +38,6 @@
         height: calc(100vh - 70px);
         position: relative;
         top: 70px;
+        left: -300;
     }
 }

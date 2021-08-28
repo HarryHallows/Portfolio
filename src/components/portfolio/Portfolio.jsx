@@ -91,7 +91,8 @@ export default function Portfolio() {
 
             <ul>
             {list.map((item) => (
-                <PortfolioList title = {item.title}
+                <PortfolioList 
+                title = {item.title}
                 active = {selected === item.id}
                 setSelect = {setSelect}
                 id = {item.id}
@@ -101,17 +102,17 @@ export default function Portfolio() {
 
             <div className="container">
                 {data.map(d => (
-                <div className="item">
-                    <img src={d.img} alt="" />
-                    <p>
-                       {d.description}
-                    </p>
-                    <Link classname="learnMore" to={d.buttonLocation}>{d.buttonName}</Link>
-                </div>
+                    <div className="item" key={d.buttonLocation}>
+                        <img src={d.img} alt="" />
+                        <p>
+                        {d.description}
+                        </p>
+                        <Link classname="learnMore" to={d.buttonLocation}>{d.buttonName}</Link>
+                    </div>
                 ))}
 
                 <a href="#contact" className="scrollArrow">
-                   <img src="assets/arrow.svg" alt="" />
+                   <img src="/Portfolio/assets/arrow.svg" alt="" />
                 </a>
               
             </div>
