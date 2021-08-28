@@ -1,5 +1,6 @@
 import "./menu.scss"
 
+//TODO: Fix menu directory since changing BROWSER ROUTER > HASHROUTER no longer valid directories 
 export default function Menu({menuOpen, setMenuOpen}) {
     return (
         <div className={"menu " +(menuOpen && "active")}>
